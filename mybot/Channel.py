@@ -1,4 +1,5 @@
 from telethon import TelegramClient, sync
+from telethon.tl.functions.channels import InviteToChannelRequest
 
 #Get User From Channel And Add To Another Channel
 #You have to be admin in both channels
@@ -19,4 +20,9 @@ channel = channels['miladk313test']
 
 # get all the users and print them
 for u in client.get_participants(channel):
+    if not u.id == 169196065:
+        client(InviteToChannelRequest(
+        channel,
+        u.id,  #user_id
+        ))
     print(u.id, u.first_name, u.last_name, u.username)
