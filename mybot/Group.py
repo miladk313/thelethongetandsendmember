@@ -1,6 +1,8 @@
 from telethon import TelegramClient, sync
 from telethon.tl.functions.messages import AddChatUserRequest
 
+#Get User From Group And Add To Another Group 
+#You have to be admin in both groups
 #api_id and api_hash get from https://my.telegram.org
 
 api_id = '1146959' 
